@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Esta es una Pagina de Series</h1>
+
+    <h2>La mejor series de Chile es {{nombre}}</h2>
+
+    <h2>Goku es un personaje de {{series.1}}</h2>
+
+    <h2>3 Series recomendables para ver son:</h2>
+    <ol>
+        {% for serie in series %}
+            <li>{{serie}}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
