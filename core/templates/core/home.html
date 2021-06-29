@@ -23,9 +23,13 @@
             <td>{{ve.modelo}}</td>
       
             <td><a href="{% url 'form_mod_vehiculo' ve.patente %}">Modificar</a></td>
+            <td><a href="{% url 'form_del_vehiculo' ve.patente %}">Eliminar</a></td>
+
         </tr>
         {%endfor%}
     </table>
+    <a href="{% url 'form_vehiculo' %}">Nuevo Vehiculo</a>
+
 
     {%  load static %}
     <img src="{% static 'core/img/charmander.jpg' %}" alt="">

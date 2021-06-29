@@ -1,6 +1,6 @@
 from core.forms import VehiculoForm
 from django import forms
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Vehiculo
 # Create your views here.
 def home(request):
@@ -39,3 +39,8 @@ def form_mod_vehiculo(request,id):
             datos['mensaje'] = "Modificados correctamente"
 
     return render(request,'core/form_mod_vehiculo.html',datos)
+
+def form_del_vehiculo(request,id):
+    vehiculo = Vehiculo.objects.get(patente = id)
+    vehiculo.delete()
+    return redirect(to="home")
