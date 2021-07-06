@@ -28,6 +28,7 @@ def form_vehiculo(request):
 
 def form_mod_vehiculo(request,id):
     vehiculo = Vehiculo.objects.get(patente = id)
+    
     datos = {
         'form':VehiculoForm(instance=vehiculo)
     }
